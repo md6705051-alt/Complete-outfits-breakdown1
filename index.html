@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aesthetic Glow Up Outfit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+    }
+
+    /* Hero section */
+    header.hero {
+      position: relative;
+      background: #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 1rem 0 2rem;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header.hero .hero-image-placeholder {
+      position: absolute;
+      inset: 0;
+      background: 
+        url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+      filter: brightness(0.25);
+      transition: filter 0.3s ease;
+      z-index: 0;
+    }
+
+    header.hero:hover .hero-image-placeholder {
+      filter: brightness(0.35);
+    }
+
+    header.hero h1 {
+      position: relative;
+      font-size: 2.75rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem;
+      z-index: 1;
+      color: #fff;
+      text-shadow: 0 0 12px rgba(0,0,0,0.6);
+    }
+
+    header.hero p {
+      position: relative;
+      font-weight: 400;
+      font-size: 1.125rem;
+      margin: 0;
+      z-index: 1;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+
+    /* Products grid */
+    .products-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+
+    /* Responsive columns */
+    @media (min-width: 600px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 900px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Product card */
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      transform: translateY(-4px);
+    }
+
+    .product-image {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+      overflow: hidden;
+      background: #f9f9f9;
+    }
+
+    .product-image img {
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .product-info {
+      padding: 1rem 1.25rem 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-name {
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin: 0 0 0.25rem;
+    }
+
+    .product-price {
+      font-weight: 400;
+      font-size: 1rem;
+      margin: 0 0 1rem;
+      color: #333;
+    }
+
+    .btn-shop {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      user-select: none;
+    }
+
+    .btn-shop:hover,
+    .btn-shop:focus {
+      background: #222;
+      outline: none;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #666;
+      padding: 1.5rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" role="banner" aria-label="Hero section with fashion style upgrade">
+    <div class="hero-image-placeholder" aria-hidden="true"></div>
+    <h1>Upgrade Your Style 🔥</h1>
+    <p>Complete Outfit Breakdown Under Budget</p>
+  </header>
+
+  <main class="container" role="main" aria-label="Fashion product listings">
+    <section class="products-grid">
+      <article class="product-card" aria-labelledby="product-wp-name" role="region">
+        <div class="product-image" aria-label="Korean Wide Pants image placeholder">
+          <img src="Korean Pant.jpg" alt="Korean Wide Pants" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <h2 id="product-wp-name" class="product-name">Korean Wide Pants</h2>
+          <p class="product-price">₹522</p>
+          <a href="https://fktr.in/kH9zcS5" target="_blank" rel="noopener noreferrer" class="btn-shop" role="button" aria-label="Shop Korean Wide Pants">Shop Now</a>
+        </div>
+      </article>
+      <article class="product-card" aria-labelledby="product-shirt-name" role="region">
+        <div class="product-image" aria-label="Light Blue Shirt image placeholder">
+          <img src="Shirt.jpg" alt="Light Blue Shirt" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <h2 id="product-shirt-name" class="product-name">Light Blue Shirt</h2>
+          <p class="product-price">₹268</p>
+          <a href="https://fktr.in/m92zTkr" target="_blank" rel="noopener noreferrer" class="btn-shop" role="button" aria-label="Shop Light Blue Shirt">Shop Now</a>
+        </div>
+      </article>
+      <article class="product-card" aria-labelledby="product-boots-name" role="region">
+        <div class="product-image" aria-label="Chelsea Boots image placeholder">
+          <img src="Boots.jpg" alt="Chelsea Boots" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <h2 id="product-boots-name" class="product-name">Chelsea Boots</h2>
+          <p class="product-price">₹540</p>
+          <a href="https://fktr.in/XWxnca8" target="_blank" rel="noopener noreferrer" class="btn-shop" role="button" aria-label="Shop Chelsea Boots">Shop Now</a>
+        </div>
+      </article>
+      <article class="product-card" aria-labelledby="product-watch-name" role="region">
+        <div class="product-image" aria-label="Silver Watch image placeholder">
+          <img src="watch.jpg" alt="Silver Watch" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <h2 id="product-watch-name" class="product-name">Silver Watch</h2>
+          <p class="product-price">₹729</p>
+          <a href="https://fktr.in/reUM0Ek" target="_blank" rel="noopener noreferrer" class="btn-shop" role="button" aria-label="Shop Silver Watch">Shop Now</a>
+        </div>
+      </article>
+      <article class="product-card" aria-labelledby="product-chain-name" role="region">
+        <div class="product-image" aria-label="Chain & Rings image placeholder">
+          <img src="Chain Rings.jpg" alt="Chain & Rings" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <h2 id="product-chain-name" class="product-name">Chain & Rings</h2>
+          <p class="product-price">₹171</p>
+          <a href="https://fktr.in/Kdympnm" target="_blank" rel="noopener noreferrer" class="btn-shop" role="button" aria-label="Shop Chain and Rings">Shop Now</a>
+        </div>
+      </article>
+      <article class="product-card" aria-labelledby="product-bracelet-name" role="region">
+        <div class="product-image" aria-label="Black Bracelet image placeholder">
+          <img src="Bracelet.jpg" alt="Black Bracelet" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <h2 id="product-bracelet-name" class="product-name">Bracelet</h2>
+          <p class="product-price">₹199</p>
+          <a href="https://fktr.in/EObySCw" target="_blank" rel="noopener noreferrer" class="btn-shop" role="button" aria-label="Shop Bracelet">Shop Now</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    Some links may be affiliate links. Prices may change.
+  </footer>
+</body>
+
+</html>
